@@ -15,6 +15,9 @@ import java.util.Properties;
 
 /**
  * Created by yuanjinglin on 17/7/11.
+ * mybatis与springboot集成的入口
+ * springboot集成了springJDBC与JPA，但是没有集成mybatis，所以想要使用mybatis就要自己去集成
+ *
  */
 @Configuration
 @MapperScan(basePackages="com.example.demo.dao.mapper")
