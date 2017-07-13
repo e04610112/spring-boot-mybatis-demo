@@ -13,5 +13,5 @@ import javax.servlet.annotation.WebInitParam;
                 @WebInitParam(name="exclusions",value="*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*")//忽略资源
         }
 )
-public class DruiStatFilter extends WebStatFilter {
+public class DruidFilter extends WebStatFilter {
 }

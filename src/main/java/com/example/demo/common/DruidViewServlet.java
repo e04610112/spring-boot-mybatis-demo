@@ -16,6 +16,6 @@ import javax.servlet.annotation.WebServlet;
                 @WebInitParam(name="loginPassword",value="123456"),// 密码
                 @WebInitParam(name="resetEnable",value="false")// 禁用HTML页面上的“Reset All”功能
         })
-public class DruiStatViewServlet extends StatViewServlet {
+public class DruidViewServlet extends StatViewServlet {
 
 }
