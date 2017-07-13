@@ -91,18 +91,8 @@ public class MybatisConfig {
      * @return
      * @throws Exception
      */
-    //@Bean
-//    @Bean(name="testDataSource", destroyMethod = "close", initMethod="init")
-//    //@Primary  @Primary 该注解表示在同一个接口有多个实现类可以注入的时候，默认选择哪一个，而不是让@autowire注解报错
-//    public DataSource getDataSource() throws Exception{
-//        Properties props = new Properties();
-//        props.put("driverClassName", env.getProperty("jdbc.driverClassName"));
-//        props.put("url", env.getProperty("jdbc.url"));
-//        props.put("username", env.getProperty("jdbc.username"));
-//        props.put("password", env.getProperty("jdbc.password"));
-//        return DruidDataSourceFactory.createDataSource(props);
-//    }
-    @Bean(name="DataSource2", destroyMethod = "close", initMethod="init")
+    @Bean
+    //@Bean(name="DataSource2", destroyMethod = "close", initMethod="init")
     @Primary//表示在同一个接口有多个实现类可以注入的时候，默认选择
     public DataSource getDataSourceTwo()throws Exception{
         DruidDataSource datasource = new DruidDataSource();
