@@ -30,7 +30,8 @@ public class MybatisConfig {
      * @return
      * @throws Exception
      */
-    @Bean
+    //@Bean
+    @Bean(name="testDataSource", destroyMethod = "close", initMethod="init")
     //@Primary  @Primary 该注解表示在同一个接口有多个实现类可以注入的时候，默认选择哪一个，而不是让@autowire注解报错
     public DataSource getDataSource() throws Exception{
         Properties props = new Properties();
