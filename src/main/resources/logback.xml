@@ -15,17 +15,6 @@
         </rollingPolicy>
     </appender>
 
-    <!-- mybatis log file -->
-    <!--<appender name="mybatisAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
-        <!--<File>${logging.root}/mybatis.log</File>-->
-        <!--<encoder>-->
-            <!--<Pattern>%date %-5level [%file:%line] %msg%n%ex</Pattern>-->
-        <!--</encoder>-->
-        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
-            <!--<FileNamePattern>${logging.root}/mybatis.log.%d{yyyy-MM-dd}</FileNamePattern>-->
-        <!--</rollingPolicy>-->
-    <!--</appender>-->
-
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <!-- encoder的默认实现类是ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
         <encoder>
@@ -38,10 +27,6 @@
         <appender-ref ref="projectAppender" />
     </logger>
 
-    <!--<logger name="org.apache.ibatis" additivity="false">-->
-        <!--<level value="${mybatis.logger.level}" />-->
-        <!--<appender-ref ref="mybatisAppender" />-->
-    <!--</logger>-->
     <!--mybatis log configure-->
     <logger name="com.apache.ibatis" level="TRACE"/>
     <logger name="java.sql.Connection" level="DEBUG"/>
