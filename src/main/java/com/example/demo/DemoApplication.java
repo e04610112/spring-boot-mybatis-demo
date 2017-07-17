@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication//相当于@Configuration,@EnableAutoConfiguration,@ComponentScan
 @ServletComponentScan//扫描原生Servlet3.0的注解进行配置、@WebServlet 、@WebListener、@WebFilte
-@EnableTransactionManagement
+@EnableTransactionManagement//开启注解事务
 public class DemoApplication {
 
 	public static void main(String[] args) {
