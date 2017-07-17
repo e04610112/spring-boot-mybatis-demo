@@ -5,7 +5,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.embedded.LocalServerPort;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockServletContext;
 import org.springframework.test.context.ContextConfiguration;
@@ -24,29 +26,26 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.junit.Assert.*;
 
 /**
+ * 测试rest接口
  * Created by yuanjinglin on 17/6/30.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest
-public class HelloTest{
-    private MockMvc mockMvc;
+@SpringBootTest(classes = DemoApplication.class,
+        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class DealerBrandControllerTest {
     @Autowired
-    private WebApplicationContext wac; // 注入WebApplicationContext
+    private TestRestTemplate restTemplate;
+    //注入端口号
+    @LocalServerPort
+    private int port;
     @Before
     public void setUp() throws Exception {
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
+
     }
     @Test
     public void testHello(){
-        try {
-
-            mockMvc.perform(MockMvcRequestBuilders.get("/user/1")
-                    .accept(MediaType.APPLICATION_JSON))
-                    .andExpect(status().isOk())
-                    .andExpect(content().string(equalTo("Hello World")));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        String body = this.restTemplate.getForObject("/dealerBrand/1", String.class);
+        System.out.println(body);
     }
 
 }
