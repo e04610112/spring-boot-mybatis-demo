@@ -19,8 +19,8 @@ import java.util.List;
 public class DealerBrandController {
     @Autowired
     private DealerBrandService dealerBrandService;
-    @RequestMapping("/{id}")
-    private List<DealerBrand> view(@PathVariable("id") Long id) {
+    @RequestMapping("/queryAll")
+    private List<DealerBrand> view() {
         return dealerBrandService.queryAllBand();
 
     }
