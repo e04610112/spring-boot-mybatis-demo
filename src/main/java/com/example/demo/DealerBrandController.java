@@ -27,7 +27,5 @@ public class DealerBrandController {
     @RequestMapping("/insert")
     private void insert() {
          dealerBrandService.inserBean();
-
-
     }
 }
