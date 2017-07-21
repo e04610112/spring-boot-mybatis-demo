@@ -1,14 +1,18 @@
 package com.example.demo.dao.domain;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
-
+//@ApiModel(value="品牌bean", description="品牌bean")
 public class DealerBrand implements Serializable {
+    @ApiModelProperty(value = "ID")
     private Long id;
-
+    @ApiModelProperty(value = "品牌",required=true)
     private String brand;
-
+    @ApiModelProperty(value = "排序ID")
     private Integer orderId;
-
+    @ApiModelProperty(value = "状态",hidden=true)
     private Integer status;
 
     private static final long serialVersionUID = 1L;

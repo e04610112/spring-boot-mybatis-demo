@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
-public class Swagger2 {
+public class Swagger {
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -28,7 +28,7 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Spring Boot Swagger2 RESTful APIs")
-                .description("更多Spring Boot相关文章请关注：")
+                .description("更多Spring Boot相关文章请关注")
                 .termsOfServiceUrl("1111")
                 .contact("yuanjing")
                 .version("1.0")
