@@ -26,17 +26,11 @@ public class DealerBrandService {
      * isolation = Isolation.DEFAULT 指定隔离级别
      */
     @Transactional(propagation = Propagation.REQUIRED)
-    public void inserBean(){
-        DealerBrand dealerBrand=new DealerBrand();
-        dealerBrand.setBrand("果味水");
-        dealerBrand.setOrderId(3);
-        dealerBrand.setStatus(1);
+    public void inserBean(DealerBrand dealerBrand){
         dealerBrandMapper.insert(dealerBrand);
-        throw  new RuntimeException("故意的");
-
     }
 
-    public void inserByCode(){
-        dealerBrandMapper.insertByCode("力量帝",2,1);
+    public void inserByCode(String brandName,Integer order){
+        dealerBrandMapper.insertByCode(brandName,order,1);
     }
 }
