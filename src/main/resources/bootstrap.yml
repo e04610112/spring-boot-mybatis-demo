@@ -1,0 +1,8 @@
+spring.cloud.consul.host: 10.213.3.126
+spring.cloud.consul.port: 8500
+spring.cloud.consul.discovery.healthCheckPath: /health
+spring.cloud.consul.discovery.healthCheckInterval: 15s
+spring.cloud.consul.discovery.instance-id: spring-boot-mybatis-demo1
+spring.cloud.consul.discovery.serviceName: spring-boot-mybatis-demo
+spring.cloud.consul.discovery.prefer-ip-address: true
+management.security.enabled: false
