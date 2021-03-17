@@ -15,4 +15,7 @@ import org.springframework.context.annotation.Configuration;
 //@ImportResource("classpath:spring/business-dubbo-consumer.xml")
 //@SpringBootApplication
 public class Config {
+    public static void main(String[] args) {
+        System.out.println("??");
+    }
 }
